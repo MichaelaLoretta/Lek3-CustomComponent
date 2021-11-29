@@ -1,11 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+
+import React, { cloneElement } from "react";
+
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  Button,
+  Image,
+  Alert,
+} from "react-native";
+
+import { useState } from "react"; //
+import LandingP from "./src/LandingP";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View>
+        <LandingP></LandingP>
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +30,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#514F59",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  header: {
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    color: "#000",
+    backgroundColor: "#514F59",
   },
 });
